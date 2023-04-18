@@ -3,7 +3,7 @@ import { server_calls } from "../api/server"
 
 
 type DestinationData = {
-    place: string,
+    name: string,
     location: string,
     category: string,
     notes: string,

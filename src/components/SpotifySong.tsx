@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SpotifyWebApi from 'spotify-web-api-node';
-import AudioPlayer from 'react-audio-player';
+// import AudioPlayer from 'react-audio-player';
 
 const spotifyApi = new SpotifyWebApi();
-const clientId = 'a4e5ac6852d54e5da4dcb7154f770571';
-const clientSecret = 'dfcb6a5faf37477c9644d352c892aef1';
+const clientId = '#';
+const clientSecret = '#';
 
 const SongPlayer = () => {
   const [previewUrl, setPreviewUrl] = useState<string | undefined>();
@@ -26,7 +26,7 @@ const SongPlayer = () => {
   const getPreviewUrl = async () => {
     const token = await getToken();
     spotifyApi.setAccessToken(token);
-    const searchResults = await spotifyApi.searchTracks('Mikrokosmos BTS');
+    const searchResults = await spotifyApi.searchTracks('Spring Day BTS');
     const trackId = searchResults.body.tracks?.items[0]?.id;
     if (trackId) {
       const track = await spotifyApi.getTrack(trackId);
@@ -44,6 +44,8 @@ const SongPlayer = () => {
     }
   };
 
+  
+
   return (
 <>
 <>
@@ -54,6 +56,19 @@ const SongPlayer = () => {
     </audio>
   )}
   </button>
+
+  {/* <button className='' onClick={playSong}>
+    
+    {previewUrl && (
+          <AudioPlayer
+            src={previewUrl}
+            volume={0.2}
+            autoPlay 
+          />
+          
+    )}
+    Play
+    </button> */}
 </>
 </>
   );

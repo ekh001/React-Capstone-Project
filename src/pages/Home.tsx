@@ -1,19 +1,14 @@
 import LandingImage from '../assets/images/landing-img9.jpg'
-// import BookPile from '../assets/images/landing-image.jpg'
-
-import Navbar from '../components/NavBar'
-
+import Background from '../assets/images/home-bg.png'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+
 import React from 'react';
 
 import PageTransition from '../components/PageTransition';
-import AskChatGPT from '../components/AskChatGPT';
-// import TravelQuestion from '../components/OpenAI';
+
+
 
 
 function Home() {
@@ -72,45 +67,37 @@ function Home() {
 
 
     <div 
-    //   style={{ backgroundImage: `url(${Background})`, height: 'calc(100vh) !important' }}
-    className="bg-black justify-center bg-cover bg-fixed h-screen"
+    style={{ backgroundImage: `url(${Background})`, height: 'calc(100vh) !important' }}
+    className=" justify-center  bg-cover bg-fixed h-screen"
     >
-
-
-
 
       <div 
         style={{ height: '100%' }} 
         className="flex justify-center place-items-center"
       >
 
-
       <PageTransition pageVariants={pageVariants}>
 
         <div 
-        // style={{ height: '70vh' }} 
         className="grid place-items-center m-5 bg-white bg-opacity-100 
         rounded-md drop-shadow-xl"
         >
-      
-      {/* <Navbar /> */}
 
           <div 
-          //   style={{ backgroundImage: `url(${Background})`, height: 'calc(100vh) !important' }}
           className="grid grid-cols-2 place-items-center"
           >
 
-           
-
-
             <h1 
             style={{ fontFamily: 'Delicious Handrawn' }}
-            className="flex-grow p-5 text-center text-6xl tracking-wide text-sky-700"
+            className="flex-grow p-10 text-center text-6xl tracking-wide text-fuchsia-800"
             >
-                    <p>
-                      Where are we headed?
-                    </p>
+              <p>
+                Where are we headed?
+              </p>
 
+            <div 
+            className='grid grid-cols-2 gap-4 place-items-center mt-10'
+            >
               <button 
               className='flex flex-grow place-items-center rounded-md 
               justify-center mt-5 p-3 text-xl font-sans  bg-sky-300 bg-opacity-40 text-sky-600 
@@ -123,22 +110,34 @@ function Home() {
                 >
                   Seoul
                 </Link>
-              </button>              
+              </button>        
+
+              
+              <button 
+              className='flex flex-grow place-items-center rounded-md 
+              justify-center mt-5 p-3 text-xl font-sans  bg-sky-300 bg-opacity-40 text-sky-600 
+              hover:text-white hover:bg-sky-300 hover:border hover:border-sky-600  
+              transition ease-linear duration-200'
+              >
+                <Link 
+                to='/busan' onClick={ clicked } 
+                className="flex-items-center lg:inline-block lg:mt-0 mr-4 ml-4"
+                >
+                  Busan
+                </Link>
+              </button> 
+            </div>       
           </h1>  
 
           <img 
             src={LandingImage} alt="" 
-            // style={{ height: '70vh' }}
             className="h-96 rounded-r-md w-full" 
             /> 
-
-      </div>  
-        
-
+        </div>  
     </div>
     </PageTransition> 
   </div>
-</div>
+    </div>
 
   )
 }

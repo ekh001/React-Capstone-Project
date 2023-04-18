@@ -16,7 +16,7 @@ const Modal = ( props: Props ) => {
             bg-gray-300 bg-opacity-0 z-10"
             >
                 <div 
-                    className='max-w-150px w-4/5 h-4/5 fixed flex z-1  bg-white drop-shadow-2xl rounded-xl overflow-y-auto'
+                    className='max-w-150px w-4/5 h-3/5 fixed flex z-1  bg-white drop-shadow-2xl rounded-xl overflow-y-auto'
                     onClick={(e) => {
                         e.stopPropagation()
                     }}

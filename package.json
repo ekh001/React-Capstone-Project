@@ -13,12 +13,11 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.11.15",
-    "@mui/x-data-grid": "^5.17.24",
     "@reduxjs/toolkit": "^1.9.3",
+    "aos": "^2.3.4",
     "firebase": "^9.19.1",
     "framer-motion": "^10.10.0",
     "react": "^18.2.0",
-    "react-audio-player": "^0.17.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
     "react-modal": "^3.16.1",
@@ -30,6 +29,7 @@
     "spotify-web-api-node": "^5.0.2"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@types/react-modal": "^3.13.1",

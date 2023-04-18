@@ -23,7 +23,7 @@ export default function SimpleAccordion() {
         <Accordion key={item.id}>
             
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>{item.place}</Typography>
+            <Typography>{item.name}</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography className=''>Location: {item.location}</Typography>

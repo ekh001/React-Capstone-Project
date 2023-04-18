@@ -29,7 +29,7 @@ const TravelForm = (props:TravelFormProps) => {
     } else {
 
 
-      // Shay added a whole new costant for a key/value pair, in order to create a new book object for the store
+
       const newDestination = {
         name: data.name,
         location: data.location,
@@ -38,7 +38,7 @@ const TravelForm = (props:TravelFormProps) => {
 
       };
       
-      // Dispatch actions to update the store with the form data
+
       dispatch(chooseName(data.name));
       dispatch(chooseLocation(data.location));
       dispatch(chooseCategory(data.category));
@@ -46,8 +46,6 @@ const TravelForm = (props:TravelFormProps) => {
       dispatch(chooseID(data.id));
       
 
-      // Then they called the server_calls.create, and passed the new constant in there to 
-      // subvert the ID for a new book entirely. 
       server_calls.create(newDestination);
       
       setTimeout( () => {window.location.reload()}, 500);

@@ -1,9 +1,9 @@
 import Home from '../pages/Home'
 import Dashboard from '../pages/Dashboard'
-import About from '../pages/About'
+
 import Intro from '../pages/Intro'
-import EditData from '../pages/EditData'
 import Seoul from '../pages/Seoul'
+import Busan from '../pages/Busan'
 
 interface RouteType {
     path: string,
@@ -27,23 +27,11 @@ const routes: RouteType[] = [
       // this is set to "false" to prevent a constant popup
       protected: false,
     },
-    {
-      path: "/about",
-      component: About,
-      name: "About",
-      protected: false,
-    },
 
     {
       path: "/intro",
       component: Home,
       name: "Home",
-      protected: false,
-    },
-    {
-      path: "/editdata",
-      component: EditData,
-      name: "Edit Data",
       protected: false,
     },
 
@@ -52,7 +40,15 @@ const routes: RouteType[] = [
       component: Seoul,
       name: "Seoul",
       protected: false,
+    },
+
+    {
+      path: "/busan",
+      component: Busan,
+      name: "Busan",
+      protected: false,
     }
+
 
   ]
 

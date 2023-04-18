@@ -1,18 +1,17 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import navBarSource from '../assets/images/bookshelves-undraw.svg'
-
-
 import { signInWithPopup, signOut } from 'firebase/auth'
 import { auth, Providers } from '../config/firebase'
 
 function Navbar() {
+
+    // constants
     const [isVisible, setIsVisible] = useState(false)
 
     const signOutOnClick = () => {
         signOut(auth)
-        location.reload();
+        location.href = '/';
     }
 
     const signInOnClick = async () => {
@@ -30,33 +29,29 @@ function Navbar() {
     const clicked = () => {
         setIsVisible(false)
     }
+
+    const [open, setOpen] = useState(true)
     
     return (
+
         <nav 
         className='flex items-center w-full justify-between flex-wrap p-3 
         bg-black bg-opacity-0'
         >
             <div 
-            className='flex items-center flex-shrink-0 text-white'
+            className='flex items-center flex-shrink-0 text-white '
             >
-                <Link 
-                to='/' 
-                className='font-semibold text-xl tracking-tight'
-                >
-                    Destination Station
-                </Link>
             </div>
 
-            {/* <div className="block"> */}
-            {/* <img src={navBarSource} style={{ height: '45px', width: '75px' }} alt="" className=''/> */}
+
                 <button
                 onClick={dropDown}
-                className='flex items-center px-3 py-2 text-white border rounded border-white
-                    hover:text-blue-300 hover:border-blue-300'
+                className={`flex items-center px-3 py-2 border border-fuchsia-800 bg-white bg-opacity-70 rounded-full  ${!isVisible && "rotate-180"} duration-300`}
+
                  >
 
                     <i 
-                    className="fa-solid fa-bars"
+                    className="fa-solid fa-arrow-up-from-bracket" style={{color: "#c954c5",}}
                     >
                     </i>
 
@@ -65,7 +60,7 @@ function Navbar() {
                 { isVisible ? ( 
                     <div 
                     style={{ transition: 'all 5s' }} 
-                    className={`w-full flex text-center transition-all ease-out duration-5000`}
+                    className={`w-full flex text-center transition-all ease-out duration-500`}
                     >
                         <div 
                         className='text-sm flex-grow'
@@ -87,21 +82,22 @@ function Navbar() {
                                 </div>
                             </button>
 
-                            {/* <button 
-                            className="p-2 m-5 bg-sky-200 opacity-70 justify-center rounded-md
-                            hover:text-sky-700 hover:bg-sky-300 transition ease-linear duration-200"
-                            >
+                            <button 
+                            className="p-2 m-5 bg-fuchsia-200 opacity-80 justify-center rounded-md 
+                            border-fuchsia-800 border-2
+                            hover:text-fuchsia-700 hover:bg-fuchsia-300 transition ease-linear duration-200"
+                        >
                                 <div>
                                     <Link 
-                                    to='/about' 
+                                    to='/seoul' 
                                     onClick={ clicked } 
                                     className="flex-items-center mt-4 lg:inline-block lg:mt-0
-                                    text-sky-600 hover:text-white mr-4 ml-4 transition ease-linear duration-200"
+                                    text-fuchsia-600 hover:text-white mr-4 ml-4"
                                     >
-                                        About
+                                        Seoul
                                     </Link>
                                 </div>
-                            </button> */}
+                            </button>
 
                             <button 
                             className="p-2 m-5 bg-fuchsia-200 opacity-80 justify-center rounded-md 
@@ -110,15 +106,35 @@ function Navbar() {
                         >
                                 <div>
                                     <Link 
-                                    to='/dashboard' 
+                                    to='/busan' 
                                     onClick={ clicked } 
                                     className="flex-items-center mt-4 lg:inline-block lg:mt-0
                                     text-fuchsia-600 hover:text-white mr-4 ml-4"
+                                    >
+                                        Busan
+                                    </Link>
+                                </div>
+                            </button>
+                            <>
+                            { auth.currentUser && (
+                            <button 
+                                className="p-2 m-5 bg-fuchsia-200 opacity-80 justify-center rounded-md 
+                                border-fuchsia-800 border-2
+                                hover:text-fuchsia-700 hover:bg-fuchsia-300 transition ease-linear duration-200"
+                            >
+                                <div>
+                                    <Link 
+                                        to='/dashboard' 
+                                        onClick={ clicked } 
+                                        className="flex-items-center mt-4 lg:inline-block lg:mt-0
+                                        text-fuchsia-600 hover:text-white mr-4 ml-4"
                                     >
                                         My Itinerary
                                     </Link>
                                 </div>
                             </button>
+                            )}
+                            </>
 
                             {
                                 !auth.currentUser ?
@@ -167,9 +183,9 @@ function Navbar() {
                     ) : ( 
                     <></> 
                 )}
-            {/* </div> */}
+
         </nav>
-  )
-}
+  );
+};
 
 export default Navbar

@@ -12,19 +12,21 @@ const AskChatGPT = () => {
     setIsModalOpen(false);
   };
 
-      // openai const
+  // openai const
+
   const [tweet, setTweet] = useState("");
   const [question, setQuestion] = useState('');
   const [sentiment, setSentiment] = useState("");
-  const API_KEY = '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';
+  const API_KEY = '#';
+
   // openai function
   async function callOpenAIAPI(){
     console.log("Calling OpenAI API...");
 
     const APIBody = {
       "model": "text-davinci-003",
-      "prompt": "Answer this question correctly, but like you're annoyed that somebody asked such a dumb question:" + question,
-      "temperature": 0.5,
+      "prompt": "Answer this question correctly, but like you're very annoyed by the question, and remind the user that you're much smarter than they are: " + question,
+      "temperature": 0.8,
       "max_tokens": 60,
       "top_p": 1.0,
       "frequency_penalty": 0.5,
@@ -49,15 +51,15 @@ const AskChatGPT = () => {
   return (
     <>
 <div className='fixed bottom-0 right-0 w-3/6 bg-white bg-opacity-0'>
-  <div className='grid grid-cols-1 place-items-end px-10'>
+  <div className='grid grid-cols-1 place-items-end px-10  drop-shadow-2xl'>
     <button
       className=' bg-fuchsia-500 p-3 m-3 h-24 w-24 rounded-full text-fuchsia-800
+      drop-shadow-2xl
       hover:bg-fuchsia-700 hover:text-white
       transition ease-linear duration-200'
       onClick={() => setIsModalOpen(true)}
     >
       <img src={questionLogo} alt="Home"
-      // style={{ height: "55%", width: "25%" }}
       className=''
       />
     </button>
@@ -71,9 +73,9 @@ const AskChatGPT = () => {
       className='text-fuchsia-800 text-5xl p-5 text-center mb-4'>Need help planning?</h2>
       
         <textarea
-          className='block w-full mb-4 p-2 border-2 border-fuchsia-800 drop-shadow-lg rounded-xl'
+          className='block w-full mb-4 p-2 border-2 border-fuchsia-800 drop-shadow-lg rounded-xl text-center text-2xl'
           onChange={(e) => setQuestion(e.target.value)}
-          placeholder='Type your travel question here! Our helpful AI, Skippy, will answer it for you.'
+          placeholder='Type your travel question here! Skippy, our helpful AI, will happily answer it for you.'
           cols={50}
           rows={10}
         />

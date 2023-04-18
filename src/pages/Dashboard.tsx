@@ -2,7 +2,7 @@
 import Navbar from '../components/NavBar'
 import ItineraryAccordion from '../components/ItineraryAccordion'
 
-// import Background from '../assets/images/background1.svg'
+import Background from '../assets/images/landing-img3.jpg'
 
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
@@ -23,11 +23,11 @@ function Dashboard() {
 const pageVariants = {
   initial: {
     opacity: 0,
-    x: "100vw",
+    y: "100vh",
   },
   animate: {
     opacity: 1,
-    x: "0",
+    y: "0",
     transition: {
       type: "spring",
       stiffness: 50,
@@ -36,7 +36,7 @@ const pageVariants = {
   },
   exit: {
     opacity: 0,
-    x: "-100vw",
+    y: "-100vh",
     transition: {
       ease: "easeInOut",
     },
@@ -46,8 +46,8 @@ const pageVariants = {
   return (
 
     <div 
-    //   style={{ backgroundImage: `url(${Background})`, height: 'calc(100vh) !important' }}
-      className="justify-center bg-black bg-cover bg-fixed"
+    style={{ backgroundImage: `url(${Background})`, height: 'calc(100vh) !important' }}
+      className="justify-center  bg-cover bg-fixed "
     >
   
       <div 
@@ -60,47 +60,16 @@ const pageVariants = {
         <div 
         style={{ width: '80vw', height: '90%'}} 
         className="grid place-items-center p-4 m-10 bg-white  
+        bg-opacity-90
         rounded-md drop-shadow-xl"
         >
 
-        <Navbar />
+          <Navbar />
 
-          {/* <p 
-          className='font-2xl mt-2'
-          >
-            These are the books that have been checked in:
-          </p>
-          <p 
-          className='font-2xl mt-2 text-center'
-          >
-            Note to Donovan and Shay: This has been shared with 
-            friends for testing. I refuse to be held accountable
-            for their actions.
-            Cheers!
-          </p> */}
-      
-        {/* <ItineraryAccordion /> */}
-        <DataTable />
+          <DataTable />
 
-        {/* <div 
-        style={{ display: 'flex', justifyContent: 'center' }}
-        >
-          <button 
-          className='place-items-center justify-center m-3 p-3 mb-5 
-           bg-fuchsia-300 bg-opacity-40 text-fuchsia-600 rounded-md 
-           hover:bg-fuchsia-300 hover:border
-           hover:border-fuchsia-600 hover:text-white transition ease-linear duration-200'
-          >
-              <Link 
-              to='/editdata' onClick={ clicked } 
-              className="flex-items-center lg:inline-block lg:mt-0 mr-4 ml-4"
-              >
-                Ready to make your mark?
-              </Link>
-
-          </button> */}
-        {/* </div> */}
-    </div>
+        </div>
+        
     </PageTransition>
   </div>
 </div>

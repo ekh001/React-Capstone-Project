@@ -7,7 +7,6 @@ const rootSlice = createSlice({
         location: "Location",
         category: "Category",
         notes: "Notes,",
-
         id: "ID,"
     },
     reducers: {
