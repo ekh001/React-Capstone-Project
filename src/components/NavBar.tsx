@@ -46,7 +46,8 @@ function Navbar() {
 
                 <button
                 onClick={dropDown}
-                className={`flex items-center px-3 py-2 border border-fuchsia-800 bg-white bg-opacity-70 rounded-full  ${!isVisible && "rotate-180"} duration-300`}
+                className={`flex items-center px-3 py-2 border border-fuchsia-800 bg-white bg-opacity-70 rounded-full  
+                ${!isVisible && "rotate-180"} duration-300`}
 
                  >
 

@@ -3,6 +3,7 @@ import Modal from './Modal'
 import { server_calls } from '../api/server';
 import { Grid, Card, CardContent, Typography, CardActions, Button, Checkbox } from '@mui/material';
 import { useGetData } from '../custom-hooks/FetchData';
+import { blueGrey } from '@mui/material/colors';
 
 function DataTable() {
   const [open, setOpen] = useState(false);
@@ -41,7 +42,8 @@ function DataTable() {
         <p 
           className="p-3 text-center text-2xl text-fuchsia-700"
         >
-          From here, you can add more stops to your journey, or yeet one out of your itinerary entirely. If you need to update, just click on the card, click "Update", and enter in your new details. 
+          From here, you can add more stops to your journey, or yeet one out of your itinerary entirely. If you need to update, 
+          just click on the card, click "Update", and enter in your new details. 
         </p>
                   
         <Grid 
@@ -52,10 +54,13 @@ function DataTable() {
           
         >
           {destinationData.map((destination) => (
-            <Grid item key={destination.id} xs={12} sm={6} md={4} lg={3}>
+            <Grid 
+            item key={destination.id} xs={12} sm={6} md={4} lg={3}>
               <Card 
                 onClick={() => setSelectionModel([destination.id])}
-                sx={{'&:hover': {boxShadow: 5}}}
+                sx={{'&:hover': {boxShadow: 5, backgroundColor: '#f9c5fa',
+                // transition: 'background-color 0.1s 0.2s' 
+              }}}
               >
                 <CardContent>
                   <Typography variant="h5" component="div">
