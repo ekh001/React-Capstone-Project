@@ -42,7 +42,7 @@ function DataTable() {
         <p 
           className="p-3 text-center text-2xl text-fuchsia-700"
         >
-          From here, you can add more stops to your journey, or yeet one out of your itinerary entirely. If you need to update, 
+          From here, you can add more stops to your journey, or delete one from the itinerary entirely. If you need to update, 
           just click on the card, click "Update", and enter in your new details. 
         </p>
                   

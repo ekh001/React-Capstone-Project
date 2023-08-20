@@ -17,7 +17,7 @@ const AskChatGPT = () => {
   const [tweet, setTweet] = useState("");
   const [question, setQuestion] = useState('');
   const [sentiment, setSentiment] = useState("");
-  const API_KEY = 'sk-#';
+  const API_KEY = '#';
 
   // openai function
   async function callOpenAIAPI(){
@@ -75,7 +75,8 @@ const AskChatGPT = () => {
         <textarea
           className='block w-full mb-4 p-2 border-2 border-fuchsia-800 drop-shadow-lg rounded-xl text-center text-2xl'
           onChange={(e) => setQuestion(e.target.value)}
-          placeholder='Type your travel question here! Skippy, our helpful AI, will happily answer it for you.'
+          placeholder='Type your travel question here! Skippy, our helpful AI from the audiobook series The Expeditionary Force, 
+          will happily(ish) answer it for you.'
           cols={50}
           rows={10}
         />

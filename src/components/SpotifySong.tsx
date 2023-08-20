@@ -52,7 +52,7 @@ const SongPlayer = () => {
 <>
   <button className='' onClick={playSong}>
   {previewUrl && (
-    <audio ref={audioRef} controls autoPlay>
+    <audio ref={audioRef} controls >
       <source src={previewUrl} type="audio/mpeg" />
     </audio>
   )}

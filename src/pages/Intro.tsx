@@ -1,6 +1,6 @@
 import React from 'react'
-import IntroImage from '../assets/images/landing-img6.jpg'
-import Background from '../assets/images/landing-img2.jpg'
+import IntroImage from '../assets/images/bestplacepurple.svg'
+import Background from '../assets/images/purplebg.png'
 import Navbar from '../components/NavBar'
 
 import { Link } from 'react-router-dom'
@@ -83,7 +83,7 @@ function Intro() {
         >
               
 
-              <div 
+          <div 
           className="flex place-items-center"
           >
 
@@ -110,27 +110,27 @@ function Intro() {
             <img 
             src={IntroImage} alt="" 
             className="h-3/6 w-2/5 mr-4 ml-4 mt-4 drop-shadow-2xl
-            border-2 border-black rounded-full"
+            "
             data-aos="zoom-out-right" 
             />
         </div>
 
         <div 
-        className=' grid grid-cols-2 place-items-center'
+        className='grid grid-cols-2 place-items-center'
         data-aos="zoom-out-right"
         >
           
 
           <button 
-          className="p-2  w-5/6 bg-sky-200 opacity-70 justify-center rounded-md
-          hover:text-sky-700 text-xl hover:bg-sky-300 transition ease-linear duration-200"
+          className="p-2  w-full bg-sky-100 drop-shadow-xl opacity-70 justify-center rounded-md
+          hover:text-sky-700 text-xl hover:bg-sky-200 transition ease-linear duration-200"
           >
               <div>
                   <Link   
                   onClick={ () => { signInOnClick()}} 
                   to="/intro"
                   className="flex-items-center mt-4 lg:inline-block lg:mt-0
-                  text-sky-600 hover:text-white mr-4 ml-4 transition ease-linear duration-200"
+                  text-sky-900  mr-4 ml-4 transition ease-linear duration-200"
                   
                   >
                       Log in with <i 
@@ -141,7 +141,7 @@ function Intro() {
                   </Link>
               </div>
             </button>
-        <SongPlayer></SongPlayer>
+        {/* <SongPlayer></SongPlayer> */}
         </div>       
       </div>    
     </div>

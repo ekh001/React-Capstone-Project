@@ -112,7 +112,7 @@ const SeoulCarousel = () => {
     // drink photos:
     const drinkPhotos: Photo[] = [
         { src: carnivore, label: "Carnivore Lounge", address: '서울 성동구 서울숲4길 20-1 지하1층',
-            description: "Pop into this old-fashioned basement lounge for an old fashioned so good, you'll look past the self-proclaimed alpha male bartender's problematic views towards women" },
+            description: "Pop into this old-fashioned basement lounge for an old fashioned." },
         { src: coco, label: "Coco Lounge", address: '코코라운지 서울 송파구 올림픽로32길 7',
         description: "A rooftop lounge on the salacious side of Jamsil with a stunning view of Lotte Tower"  },
         { src: shutter, label: 'Shutter 54', address: 'shutter54 서울 송파구 백제고분로45길 22-1 1층',

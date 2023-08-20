@@ -46,15 +46,15 @@ const pageVariants = {
   return (
 
     <div 
-    style={{ backgroundImage: `url(${Background})`, height: 'calc(100vh) !important' }}
-      className="justify-center  bg-cover bg-fixed "
+    
+      className="justify-center bg-cover bg-fixed bg-fuchsia-200"
     >
   
       <div 
-      className="flex justify-center items-center h-full"
+      className="flex justify-center items-center h-screen"
       >
     
-        <PageTransition pageVariants={pageVariants}>
+        {/* <PageTransition pageVariants={pageVariants}> */}
     
   
         <div 
@@ -70,7 +70,7 @@ const pageVariants = {
 
         </div>
         
-    </PageTransition>
+    {/* </PageTransition> */}
   </div>
 </div>
 
