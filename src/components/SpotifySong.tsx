@@ -3,8 +3,8 @@ import SpotifyWebApi from 'spotify-web-api-node';
 // import AudioPlayer from 'react-audio-player';
 
 const spotifyApi = new SpotifyWebApi();
-const clientId = '#';
-const clientSecret = '#';
+const clientId = 'a4e5ac6852d54e5da4dcb7154f770571';
+const clientSecret = 'dfcb6a5faf37477c9644d352c892aef1';
 
 
 const SongPlayer = () => {

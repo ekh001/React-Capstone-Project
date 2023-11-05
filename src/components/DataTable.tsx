@@ -77,7 +77,7 @@ function DataTable() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small" onClick={() => deleteData(destination)}>Delete From Itinerary</Button>
+                    <Button size="small" onClick={() => deleteData(destination)}>Delete</Button>
                 </CardActions>
               </Card>
             </Grid>

@@ -17,7 +17,7 @@ const AskChatGPT = () => {
   const [tweet, setTweet] = useState("");
   const [question, setQuestion] = useState('');
   const [sentiment, setSentiment] = useState("");
-  const API_KEY = '#';
+  const API_KEY = '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';
 
   // openai function
   async function callOpenAIAPI(){
