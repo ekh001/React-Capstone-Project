@@ -130,7 +130,7 @@ function Navbar() {
                                         className="flex-items-center mt-4 lg:inline-block lg:mt-0
                                         text-fuchsia-600 hover:text-white mr-4 ml-4"
                                     >
-                                        My Itinerary
+                                        My Saved Places
                                     </Link>
                                 </div>
                             </button>
