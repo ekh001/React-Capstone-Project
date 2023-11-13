@@ -98,12 +98,12 @@ function Intro() {
               SeoulMate
             </p>
             <p 
-            style={{ fontFamily: 'Delicious Handrawn' }}
+            style={{ fontFamily: 'Raleway' }}
             className='p-5 pt-20 text-5xl lg:text-7xl lg:p-10 tracking-wide
             text-fuchsia-600 text-center drop-shadow-2xl'
             data-aos="zoom-out-down"
             >
-              Your Ultimate Korea Travel Buddy
+              The ultimate Korea travel buddy
             </p>
           </div>
 
@@ -122,15 +122,15 @@ function Intro() {
           
 
           <button 
-          className="p-2  w-full bg-sky-100 drop-shadow-xl opacity-70 justify-center rounded-md
-          hover:text-sky-700 text-xl hover:bg-sky-200 transition ease-linear duration-200"
+          className="p-2  w-full bg-fuchsia-700 text-fuchsia-100 drop-shadow-xl opacity-70 justify-center rounded-md
+           text-xl hover:bg-fuchsia-800 transition ease-linear duration-200"
           >
               <div>
                   <Link   
                   onClick={ () => { signInOnClick()}} 
                   to="/intro"
                   className="flex-items-center mt-4 lg:inline-block lg:mt-0
-                  text-sky-900  mr-4 ml-4 transition ease-linear duration-200"
+                    mr-4 ml-4 transition ease-linear duration-200"
                   
                   >
                       Log in with <i 
